@@ -1,0 +1,17 @@
+.page-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.main-space{
+  background-color: #000;
+  width: 50%;
+}
+.background-img{
+  width: 50%;
+  background-image: url(../img/bgEmail.jpeg);
+  background-position-y: top;
+  background-size: 163.194% 115.385%;
+  background-position-x: 76%;
+  
+}

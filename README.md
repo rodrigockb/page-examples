@@ -1,4 +1,7 @@
-# page-examples
+# Iniciando rapidamente
+> npm install
+-como dev
+>npm run dev
 # Exemplos de paginas
 # pacotes utilizados
 ## desenvolvendo
