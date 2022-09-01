@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+body{
+  color: #ddd;
+}
 .page-content{
   width: 100%;
   height: 100%;
@@ -6,12 +10,120 @@
 .main-space{
   background-color: #000;
   width: 50%;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+
 }
+.msg{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 9px;
+}
+.msg h1{
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #08C05E;
+  
+}
+.msg span{
+font-family: 'Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 1.4rem;
+line-height: 1.6rem;
+color: #FFFFFF;
+}
+.msg p{
+font-family: 'Spartan';
+font-style: normal;
+font-weight: 400;
+font-size: 1.4rem;
+line-height: 1.9rem;
+color: #FFFFFF;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.formulario span{
+font-family: 'Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 1.4rem;
+line-height: 1.9rem;
+color: #A8A8A8;
+}
+.email-container{
+  border-left: 5px solid #08C05E;
+  width: 55.42vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  filter: drop-shadow(4px 10px 15px rgba(0,0,0,0.5));
+}
+.email-container input[type="email"]{
+  padding: 1.5rem 1.7rem;
+  border: 0;
+  outline: 0;
+  flex-grow: 1;
+}
+.email-container button[type="submit"]{
+  outline: 0;
+  border: 0;
+  width: 48px;
+  height: 100%;
+  background-color: #8257E5;
+  background-image: url(../img/compass.png);
+  background-position: center center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.link{
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #8257E5;
+}
+
+
+
 .background-img{
   width: 50%;
   background-image: url(../img/bgEmail.jpeg);
   background-position-y: top;
   background-size: 163.194% 115.385%;
-  background-position-x: 76%;
-  
+  background-position-x: 76%; 
+}
+
+.animation{
+  animation-name: fade-in;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+}
+@keyframes fade-in{
+  from{
+    opacity: 0;
+    transform: translateX(5%);
+  }to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }

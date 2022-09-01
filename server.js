@@ -10,7 +10,7 @@ module.exports=(porta=5000)=>{
   
   app.get("/login",(req,res)=>res.sendFile(`${__dirname}/public/login.html`))
   app.get("/sobre",(req,res)=>res.redirect(`/login`))
+  
   app.listen(porta,debug && console.log(`[${__filename.replace(__dirname,"")}] Servidor escutando porta: ${porta}`))  
-
   return true
 }
