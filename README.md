@@ -1,3 +1,5 @@
+# Objetivo
+- Formulario de captura de email
 # Iniciando rapidamente
 > npm install
 -como dev
