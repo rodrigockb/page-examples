@@ -6,6 +6,7 @@ const app = express()
 
 const staticLink = __dirname+"/public"
 app.use(express.static(staticLink));
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 DEBUG && console.log(`[${__filename.replace(__dirname,"")}] express.static(${staticLink})`)
