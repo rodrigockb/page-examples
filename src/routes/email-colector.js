@@ -8,6 +8,7 @@ rotas.get("/",(req,res)=>res.sendFile(path.join(viewsBase+"email-colector.html")
 rotas.get("*",(req,res)=>res.redirect(`/`))
 
 rotas.post('/post',(req, res) => {
+  console.log(`[${__filename.replace(__dirname,"")}] /POST recived:`)
   console.log(req.body)
   res.json(req.body)
 })

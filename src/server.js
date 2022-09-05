@@ -11,5 +11,5 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use("/",rotas)
 
-DEBUG && console.log(`[${__filename.replace(__dirname,"")}]express.static(${staticLink})`)
+DEBUG && console.log(`[${__filename.replace(__dirname,"")}] express.static(${staticLink})`)
 app.listen(PORTA,()=>DEBUG && console.log(`[${__filename.replace(__dirname,"")}] Servidor escutando porta: ${PORTA}`))  
