@@ -10,20 +10,20 @@ elementBtn.addEventListener("click",(event)=>{
 
 
 const ajaxPost = ()=>{
-  const xhr = new XMLHttpRequest();
-  xhr.open("POST", "/post");
+  const ajax = new XMLHttpRequest();
+  ajax.open("POST", "/post");
 
   //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhr.setRequestHeader("Content-type", "application/json");
+  ajax.setRequestHeader("Content-type", "application/json");
 
   const toSend = JSON.stringify({
     email: elementInputEmail.value
   })
-  xhr.send(toSend);
+  ajax.send(toSend);
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      var data = xhr.responseText;
+  ajax.onreadystatechange = function() {
+    if (ajax.readyState == 4 && ajax.status == 200) {
+      var data = ajax.responseText;
       console.log(data);
     }
   }
