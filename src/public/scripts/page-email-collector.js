@@ -1,23 +1,26 @@
-let elementBtn = document.querySelector("button.enviar")
-let elementInputEmail = document.querySelector('.email-container input[type="email"]')
 
+const {elementBtnSubmit,elementInputEmail}=pageElements()
 
-elementBtn.addEventListener("click",(event)=>{
+// Funções e metodos
+
+elementBtnSubmit.addEventListener("click",(event)=>{
   event.preventDefault()
-  //fetchPost() //ok
-  ajaxPost()  //ok
+  const email = elementInputEmail.value
+  fetchPost(email) //ok
+  // ajaxPost(email)  //ok
 })
 
 
-const ajaxPost = ()=>{
+// Funções e metodos
+
+const ajaxPost=(valueToSend)=>{
   const ajax = new XMLHttpRequest();
   ajax.open("POST", "/email-colector/post");
-
   //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   ajax.setRequestHeader("Content-type", "application/json");
 
   const toSend = JSON.stringify({
-    email: elementInputEmail.value
+    email: valueToSend
   })
   ajax.send(toSend);
 
@@ -29,8 +32,7 @@ const ajaxPost = ()=>{
   }
 }
 
-const fetchPost = () => {
-  const objToSend = {email:elementInputEmail.value};
+const fetchPost = (valueToSend) => {
   fetch("/email-colector/post",
   {
       headers: {
@@ -38,9 +40,16 @@ const fetchPost = () => {
         'Content-Type': 'application/json'
       },
       method: "POST",
-      body: JSON.stringify(objToSend)
+      body: JSON.stringify({email:valueToSend})
   })
   .then(resposta=>resposta.json())
   .then(json=>console.log(json))
   .catch((erro)=>console.log(erro))
+}
+
+function pageElements(){
+  return{
+    elementBtnSubmit:document.querySelector("button.enviar"),
+    elementInputEmail:document.querySelector('.email-container input[type="email"]')
+  }
 }
