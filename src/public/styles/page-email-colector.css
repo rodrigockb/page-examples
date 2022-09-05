@@ -89,7 +89,7 @@ color: #A8A8A8;
 .enviar{
   outline: 0;
   border: 0;
-  width: 4.8rem;
+  min-width: 4.8rem;
   height: 100%;
   background-color: #8257E5;
   background-image: var(--compas-url);
@@ -111,4 +111,14 @@ color: #A8A8A8;
   background-position-y: top;
   background-size: 163.194% 115.385%;
   background-position-x: 76%; 
+}
+
+@media (max-width: 470px){
+  .background-img{
+    display: none;
+  }
+  .main-space{
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
