@@ -11,7 +11,7 @@ elementBtn.addEventListener("click",(event)=>{
 
 const ajaxPost = ()=>{
   const ajax = new XMLHttpRequest();
-  ajax.open("POST", "/post");
+  ajax.open("POST", "/email-colector/post");
 
   //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   ajax.setRequestHeader("Content-type", "application/json");
@@ -31,7 +31,7 @@ const ajaxPost = ()=>{
 
 const fetchPost = () => {
   const objToSend = {email:elementInputEmail.value};
-  fetch("/post",
+  fetch("/email-colector/post",
   {
       headers: {
         'Accept': 'application/json',
