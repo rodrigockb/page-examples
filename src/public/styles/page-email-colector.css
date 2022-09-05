@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+:root{
+  --compas-url: url("/assets/compass.png");
+  --bg-img: url(/imgs/bgEmail.jpeg);
+}
+html{
+  font-size: 40%;
+}
 body{
   color: #ddd;
 }
@@ -10,18 +17,17 @@ body{
 .main-space{
   background-color: #000;
   width: 50%;
-  padding: 50px 30px;
+  padding: 5rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
-
+  gap: 5rem;
 }
 .msg{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 9px;
+  gap: .9rem;
 }
 .msg h1{
   font-family: 'Work Sans';
@@ -48,11 +54,10 @@ font-size: 1.4rem;
 line-height: 1.9rem;
 color: #FFFFFF;
 }
-
 .formulario{
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 1.7rem;
 }
 .formulario span{
 font-family: 'Spartan';
@@ -62,8 +67,11 @@ font-size: 1.4rem;
 line-height: 1.9rem;
 color: #A8A8A8;
 }
+.formulario button{
+  cursor: pointer;
+}
 .email-container{
-  border-left: 5px solid #08C05E;
+  border-left: .5rem solid #08C05E;
   width: 55.42vw;
   display: flex;
   align-items: center;
@@ -77,21 +85,18 @@ color: #A8A8A8;
   outline: 0;
   flex-grow: 1;
 }
-.email-container button[type="submit"]{
+/*.email-container button[type="submit"]{*/
+.enviar{
   outline: 0;
   border: 0;
-  width: 48px;
+  width: 4.8rem;
   height: 100%;
   background-color: #8257E5;
-  background-image: url(../img/compass.png);
+  background-image: var(--compas-url);
   background-position: center center;
-  background-size: 24px 24px;
+  background-size: 2.4rem 2.4rem;
   background-repeat: no-repeat;
 }
-
-
-
-
 .link{
   font-family: 'Spartan';
   font-style: normal;
@@ -100,30 +105,10 @@ color: #A8A8A8;
   line-height: 1.9rem;
   color: #8257E5;
 }
-
-
-
 .background-img{
   width: 50%;
-  background-image: url(../img/bgEmail.jpeg);
+  background-image: var(--bg-img);
   background-position-y: top;
   background-size: 163.194% 115.385%;
   background-position-x: 76%; 
-}
-
-.animation{
-  animation-name: fade-in;
-  animation-duration: .3s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-}
-@keyframes fade-in{
-  from{
-    opacity: 0;
-    transform: translateX(5%);
-  }to{
-    opacity: 1;
-    transform: translateX(0%);
-  }
 }
